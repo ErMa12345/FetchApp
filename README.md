@@ -6,10 +6,13 @@ For the Fetch Internship App Submission
 
 ## Running
 To run the app, simply clone the project and run the emulated app. For recreatability, I've done my development on a Pixel Pro 8 API 35.
+#### Demo: https://youtu.be/_ZpoirMU-g4
+
 It should product something like:
 
 <img width="646" alt="image" src="https://github.com/user-attachments/assets/9ba38f16-50ad-47b4-954c-88657176c42c">
 <img width="229" alt="image" src="https://github.com/user-attachments/assets/adb56d52-26d1-49a2-a8b5-ba062b6d7da4">
+
 
 
 *Note: If the phone is in portrait mode, scroll right to see all columns.*
