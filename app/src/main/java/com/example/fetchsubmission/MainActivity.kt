@@ -64,6 +64,9 @@ fun GenerateTable() {
         val parsedData = pd.parseData(data)
         parsed = parsedData
     }
+    if (parsed == emptyList<GroupedItem>()) {
+        BasicText(text = "Endpoint is incorrect or is wrong :(")
+    }
     if (parsed == null) {
         BasicText(text = "Loading...")
     } else {
