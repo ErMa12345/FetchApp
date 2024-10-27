@@ -33,9 +33,9 @@ class PullData {
             val items: List<Item> = gson.fromJson(data, itemType)
             return items
                 .filter {!it.name.isNullOrBlank()}
-                .sortedWith(compareBy({ it.listId }, { it.id }, { it.name }))
-                .groupBy { it.listId }
-                .map { GroupedItem(it.key, it.value) }
+                .sortedWith(compareBy({it.listId}, {it.id}, {it.name}))
+                .groupBy {it.listId}
+                .map {GroupedItem(it.key, it.value)}
         } catch (e: Exception) {
             return emptyList<GroupedItem>()
         }
