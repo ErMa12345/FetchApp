@@ -2,21 +2,15 @@ package com.example.fetchsubmission
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.ResponseBody
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class PullData {
     suspend fun getData(): String {
         return withContext(Dispatchers.IO) {
             val call = ApiClient.apiService.fetchData("hiring.json")
             try {
-                val response = call.execute() // Use execute for synchronous call in coroutine
+                val response = call.execute()
                 if (response.isSuccessful) {
                     println("Server contacted and has file")
                     val inputStream = response.body()?.byteStream()
