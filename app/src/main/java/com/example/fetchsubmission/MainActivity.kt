@@ -65,7 +65,7 @@ fun GenerateTable() {
         parsed = parsedData
     }
     if (parsed == emptyList<GroupedItem>()) {
-        BasicText(text = "Endpoint is incorrect or is wrong :(")
+        BasicText(text = "Endpoint could not be reached. Try restarting the app or checking the endpoint")
     }
     if (parsed == null) {
         BasicText(text = "Loading...")
@@ -80,8 +80,8 @@ fun GenerateTable() {
                     LazyColumn(modifier = Modifier.fillMaxHeight()) {
                         items(group.items) { item ->
                             Column(modifier = Modifier.padding(vertical = 4.dp)) {
-                                BasicText(text = "Name: ${item.name}")
                                 BasicText(text = "ID: ${item.id}")
+                                BasicText(text = "Name: ${item.name}")
                             }
                         }
                     }
